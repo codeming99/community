@@ -61,6 +61,5 @@ public class AuthorizeController {
             return "redirect:/";
         }
 
-
     }
 }
