@@ -6,12 +6,14 @@
 [Spring Web 文档](https://spring.io/guides/gs/serving-web-content/)  
 [es](https://elasticsearch.cn/explore)  
 [BootStrap](https://v3.bootcss.com/getting-started/)  
-[GitHub OAuth](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)
+[GitHub OAuth](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)  
+[Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#setting-arrtibute-values)
 
 ## 工具
 [Git](https://git-scm.com/download)  
 [Visual Paradigm](https://www.visual-paradigm.com)  
-[flyway](https://flywaydb.org/getstarted/firststeps/maven)  
+[Flyway](https://flywaydb.org/getstarted/firststeps/maven)  
+[Lombok](https://www.projectlombok.org)  
 
 
 
