@@ -2,14 +2,9 @@ package com.wym.community.controller;
 
 
 import com.wym.community.dto.PaginationDTO;
-import com.wym.community.dto.QuestionDTO;
-import com.wym.community.mapper.QuestionMapper;
 import com.wym.community.mapper.UserMapper;
-import com.wym.community.model.Question;
 import com.wym.community.model.User;
 import com.wym.community.service.QuestionService;
-import org.apache.ibatis.annotations.Param;
-import org.omg.CORBA.INTERNAL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 @Controller
 public class IndexController {
