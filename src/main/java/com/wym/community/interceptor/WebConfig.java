@@ -7,6 +7,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
+//@EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {
 
     @Autowired
@@ -16,4 +17,5 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(sessionInterceptor).addPathPatterns("/**");
     }
+
 }
