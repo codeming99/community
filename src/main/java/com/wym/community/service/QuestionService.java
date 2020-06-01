@@ -4,6 +4,7 @@ import com.wym.community.dto.PaginationDTO;
 import com.wym.community.dto.QuestionDTO;
 import com.wym.community.exception.CustomizeErrorCode;
 import com.wym.community.exception.CustomizeException;
+import com.wym.community.mapper.QuestionExtMapper;
 import com.wym.community.mapper.QuestionMapper;
 import com.wym.community.mapper.UserMapper;
 import com.wym.community.model.Question;
@@ -25,6 +26,9 @@ public class QuestionService {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
 
     public PaginationDTO list(Integer page, Integer size) {
         PaginationDTO paginationDTO = new PaginationDTO();
@@ -144,5 +148,12 @@ public class QuestionService {
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
         }
+    }
+
+    public void incView(Integer id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }
