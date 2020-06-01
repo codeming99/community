@@ -2,6 +2,8 @@ package com.wym.community.service;
 
 import com.wym.community.dto.PaginationDTO;
 import com.wym.community.dto.QuestionDTO;
+import com.wym.community.exception.CustomizeErrorCode;
+import com.wym.community.exception.CustomizeException;
 import com.wym.community.mapper.QuestionMapper;
 import com.wym.community.mapper.UserMapper;
 import com.wym.community.model.Question;
@@ -113,6 +115,9 @@ public class QuestionService {
 
     public QuestionDTO getById(Integer id) {
         Question question = questionMapper.selectByPrimaryKey(id);
+        if(question == null){
+            throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+        }
         QuestionDTO questionDTO = new QuestionDTO();
         BeanUtils.copyProperties(question,questionDTO);
         User user = userMapper.selectByPrimaryKey(question.getCreator());
@@ -134,7 +139,10 @@ public class QuestionService {
             QuestionExample questionExample = new QuestionExample();
             questionExample.createCriteria()
                     .andIdEqualTo(question.getId());
-            questionMapper.updateByExampleSelective(updateQuestion,questionExample);
+            int update = questionMapper.updateByExampleSelective(updateQuestion,questionExample);
+            if(update != 1){
+                throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+            }
         }
     }
 }
