@@ -1,7 +1,13 @@
+/**
+ * 提交回复
+ */
 function post() {
     const questionId = $("#question_id").val();
     const content = $("#comment_content").val();
+    comment2Target(questionId,1,content);
+}
 
+function comment2Target(targetId,type,content) {
     if(!content){
         alert("不能回复空的内容~~");
         return;
@@ -12,9 +18,9 @@ function post() {
         url:"/comment",
         contentType:"application/json",
         data:JSON.stringify({
-                "parentId":questionId,
-                "content":content,
-                "type":1
+            "parentId":targetId,
+            "content":content,
+            "type":type
         }),
         success:function (response) {
             if(response.code == 200){
@@ -35,4 +41,59 @@ function post() {
         },
         dataType:"json"
     });
+}
+
+/**
+ * 二级评论
+ * @param e
+ */
+function comment(e) {
+    const commentId = e.getAttribute("data-id");
+    const content = $("#input-" + commentId).val();
+    comment2Target(commentId,2,content);
+}
+
+/*
+    展开二级评论
+ */
+function collapseComments(e) {
+    const id = e.getAttribute("data-id");
+    const comments = $("#comment-" + id);
+
+    // 获取二级评论展开状态
+    const collapse = e.getAttribute("data-collapse");
+    if(collapse){
+        //折叠二级评论
+        comments.removeClass("in");
+        e.removeAttribute("data-collapse");
+        e.classList.remove("active");
+    }else {
+        $.getJSON("/comment/" + id,function (data) {
+           console.log(data);
+           const commentBody = $("#comment-body-" + id);
+           const items = [];
+
+           $.each(data.data,function (comment) {
+               const c = $("<div/>",{
+                   "class":"col-lg-12 col-md-12 col-sm-12 col-xs-12 comments",
+                   html:comment.content
+               });
+                items.push(c);
+           });
+
+           commentBody.append($("<div/>",{
+               "class":"col-lg-12 col-md-12 col-sm-12 col-xs-12 collapse sub-comments",
+               "id":"comment-" + id,
+               html:items.join("")
+           }));
+
+            //展开二级评论
+            comments.addClass("in");
+            //标记二级评论展开状态
+            e.setAttribute("data-collapse","in");
+            e.classList.add("active");
+        });
+
+    }
+
 }

@@ -1,7 +1,9 @@
 package com.wym.community.controller;
 
 import com.wym.community.dto.CommentCreateDTO;
+import com.wym.community.dto.CommentDTO;
 import com.wym.community.dto.ResultDTO;
+import com.wym.community.enums.CommentTypeEnum;
 import com.wym.community.exception.CustomizeErrorCode;
 import com.wym.community.model.Comment;
 import com.wym.community.model.User;
@@ -11,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 public class CommentController {
@@ -41,6 +44,13 @@ public class CommentController {
         comment.setLikeCount(0L);
         commentService.insert(comment);
         return ResultDTO.successOf();
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/comment/{id}",method = RequestMethod.GET)
+    public ResultDTO<List> comments(@PathVariable(name = "id") Long id){
+        List<CommentDTO> commentDTOS = commentService.listByTargetId(id, CommentTypeEnum.COMMENT);
+        return ResultDTO.successOf(commentDTOS);
     }
 
 }

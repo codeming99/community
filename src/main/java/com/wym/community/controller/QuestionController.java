@@ -2,6 +2,7 @@ package com.wym.community.controller;
 
 import com.wym.community.dto.CommentDTO;
 import com.wym.community.dto.QuestionDTO;
+import com.wym.community.enums.CommentTypeEnum;
 import com.wym.community.service.CommentService;
 import com.wym.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class QuestionController {
                            Model model){
         QuestionDTO questionDTO = questionService.getById(id);
 
-        List<CommentDTO> comments = commentService.listByQuestionId(id);
+        List<CommentDTO> comments = commentService.listByTargetId(id, CommentTypeEnum.QUESTION);
         //累加阅读数
         questionService.incView(id);
         model.addAttribute("question",questionDTO);
