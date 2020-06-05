@@ -4,7 +4,6 @@ import com.wym.community.exception.CustomizeErrorCode;
 import com.wym.community.exception.CustomizeException;
 import lombok.Data;
 
-import java.util.List;
 
 @Data
 public class ResultDTO<T> {
