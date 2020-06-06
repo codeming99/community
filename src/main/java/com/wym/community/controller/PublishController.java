@@ -1,9 +1,11 @@
 package com.wym.community.controller;
 
+import com.wym.community.cache.TagCache;
 import com.wym.community.dto.QuestionDTO;
 import com.wym.community.model.Question;
 import com.wym.community.model.User;
 import com.wym.community.service.QuestionService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +23,8 @@ public class PublishController {
     private QuestionService questionService;
 
     @GetMapping("/publish")
-    public String publish(){
+    public String publish(Model model){
+        model.addAttribute("tags", TagCache.get());
         return "publish";
     }
 
@@ -34,6 +37,8 @@ public class PublishController {
         model.addAttribute("description",question.getDescription());
         model.addAttribute("tag",question.getTag());
         model.addAttribute("id",question.getId());
+
+        model.addAttribute("tags", TagCache.get());
         return "publish";
     }
 
@@ -63,6 +68,12 @@ public class PublishController {
 
         if(tag == null || tag == ""){
             model.addAttribute("error","标签不能为空");
+            return "publish";
+        }
+
+        String invalid = TagCache.filterInvalid(tag);
+        if(StringUtils.isNotBlank(invalid)){
+            model.addAttribute("error","输入了非法标签:"+invalid);
             return "publish";
         }
 
