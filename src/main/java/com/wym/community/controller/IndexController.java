@@ -22,7 +22,7 @@ public class IndexController {
                         @RequestParam(value = "size", defaultValue = "5") Integer size){
 
         //页面加载完成之前将提问的数据添加到model中
-        PaginationDTO pagination =questionService.list(page,size);
+        PaginationDTO pagination = questionService.list(page,size);
         model.addAttribute("pagination",pagination);
 
         return "index";
