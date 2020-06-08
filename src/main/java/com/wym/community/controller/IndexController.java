@@ -3,7 +3,6 @@ package com.wym.community.controller;
 
 import com.wym.community.dto.PaginationDTO;
 import com.wym.community.service.QuestionService;
-import javafx.scene.chart.ValueAxis;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
