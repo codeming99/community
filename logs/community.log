@@ -771,3 +771,29 @@
 2020-06-08 21:41:45.388  INFO 51470 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-08 21:41:45.410  INFO 51470 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 >>>>>>> Stashed changes
+2020-06-08 21:56:32.816  INFO 51988 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication v0.0.1-SNAPSHOT on 10-9-58-53 with PID 51988 (/root/App/community/target/community-0.0.1-SNAPSHOT.jar started by root in /root/App/community)
+2020-06-08 21:56:32.818  INFO 51988 --- [main] com.wym.community.CommunityApplication   : The following profiles are active: production
+2020-06-08 21:56:35.369  INFO 51988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-06-08 21:56:35.398  INFO 51988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 21:56:35.398  INFO 51988 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 21:56:35.542  INFO 51988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 21:56:35.542  INFO 51988 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2629 ms
+2020-06-08 21:56:35.867  WARN 51988 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-06-08 21:56:37.232  INFO 51988 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 21:56:37.407  INFO 51988 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 21:56:37.888  INFO 51988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-06-08 21:56:37.918  INFO 51988 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 5.915 seconds (JVM running for 6.779)
+2020-06-08 21:56:57.098  INFO 51988 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 21:56:57.098  INFO 51988 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 21:56:57.116  INFO 51988 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-06-08 21:56:57.255  INFO 51988 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 21:56:57.585  INFO 51988 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 21:56:57.592 DEBUG 51988 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 21:56:57.649 DEBUG 51988 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 21:56:57.676 DEBUG 51988 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 21:56:57.696 DEBUG 51988 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 21:56:57.720 DEBUG 51988 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-06-08 21:56:57.721 DEBUG 51988 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-06-08 21:57:22.311  INFO 51988 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 21:57:22.312  INFO 51988 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 21:57:22.326  INFO 51988 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
