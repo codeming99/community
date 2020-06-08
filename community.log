@@ -1,0 +1,65 @@
+2020-06-08 17:13:27.530  INFO 24507 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication on wangyimingdeMacBook-Pro.local with PID 24507 (/Users/wym/IdeaProjects/community/target/classes started by wym in /Users/wym/IdeaProjects/community)
+2020-06-08 17:13:27.532  INFO 24507 --- [main] com.wym.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-06-08 17:13:28.345  INFO 24507 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-06-08 17:13:28.352  INFO 24507 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 17:13:28.352  INFO 24507 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 17:13:28.423  INFO 24507 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 17:13:28.423  INFO 24507 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 850 ms
+2020-06-08 17:13:28.831  INFO 24507 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 17:13:28.886  INFO 24507 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 17:13:29.045  INFO 24507 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-06-08 17:13:29.055  INFO 24507 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 1.827 seconds (JVM running for 2.4)
+2020-06-08 17:13:39.045  INFO 24507 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 17:13:39.045  INFO 24507 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 17:13:39.050  INFO 24507 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-08 17:13:39.094  INFO 24507 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 17:13:39.184  INFO 24507 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 17:14:13.680  INFO 24507 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 17:14:13.681  INFO 24507 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 17:14:13.683  INFO 24507 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 17:16:26.743  INFO 24566 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication on wangyimingdeMacBook-Pro.local with PID 24566 (/Users/wym/IdeaProjects/community/target/classes started by wym in /Users/wym/IdeaProjects/community)
+2020-06-08 17:16:26.745  INFO 24566 --- [main] com.wym.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-06-08 17:16:27.691  INFO 24566 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-06-08 17:16:27.699  INFO 24566 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 17:16:27.699  INFO 24566 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 17:16:27.759  INFO 24566 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 17:16:27.759  INFO 24566 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 971 ms
+2020-06-08 17:16:28.242  INFO 24566 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 17:16:28.294  INFO 24566 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 17:16:28.459  INFO 24566 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-06-08 17:16:28.469  INFO 24566 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 2.062 seconds (JVM running for 2.77)
+2020-06-08 17:16:33.618  INFO 24566 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 17:16:33.618  INFO 24566 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 17:16:33.623  INFO 24566 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-08 17:16:33.669  INFO 24566 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 17:16:33.763  INFO 24566 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 17:16:33.770 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 17:16:33.787 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 17:16:33.801 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 17:16:33.823 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 17:16:33.825 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 17:16:33.827 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 17:16:33.844 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 17:16:33.845 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 17:16:33.845 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 17:16:33.846 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 17:16:33.847 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-06-08 17:16:33.850 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : <==      Total: 5
+2020-06-08 17:16:33.851 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 17:16:33.851 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 17:16:33.852 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 17:16:33.856 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 17:16:33.857 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 17:16:33.858 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 17:16:33.858 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 17:16:33.859 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 17:16:33.859 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 17:16:33.859 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 17:16:33.859 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 17:16:33.860 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 17:16:33.860 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 17:16:33.860 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 17:16:33.861 DEBUG 24566 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 17:17:18.851  INFO 24566 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 17:17:18.852  INFO 24566 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 17:17:18.854  INFO 24566 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
