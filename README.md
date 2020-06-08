@@ -9,7 +9,15 @@
 ### 步骤
 - yum update
 - yum install git
-
+- mkdir App
+- cd App
+- git clone https://github.com/codeming99/community.git
+- yum install maven
+- mvn -v
+- mvn compile package
+- cp src/main/resources/application.properties src/main/resources/application-production.properties
+- vim src/main/resources/application-production.properties
+- java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar
 
 ## 资料
 

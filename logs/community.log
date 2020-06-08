@@ -71,3 +71,355 @@
 2020-06-08 17:22:15.800  INFO 24594 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-08 17:22:15.801  INFO 24594 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-08 17:22:15.804  INFO 24594 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 20:15:11.674  INFO 25203 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication on wangyimingdeMacBook-Pro.local with PID 25203 (/Users/wym/IdeaProjects/community/target/classes started by wym in /Users/wym/IdeaProjects/community)
+2020-06-08 20:15:11.677  INFO 25203 --- [main] com.wym.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-06-08 20:15:12.633  INFO 25203 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-06-08 20:15:12.640  INFO 25203 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 20:15:12.641  INFO 25203 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 20:15:12.696  INFO 25203 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 20:15:12.697  INFO 25203 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 974 ms
+2020-06-08 20:15:13.174  INFO 25203 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:15:13.228  INFO 25203 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 20:15:13.402  INFO 25203 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-06-08 20:15:13.412  INFO 25203 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 2.102 seconds (JVM running for 2.783)
+2020-06-08 20:15:22.522  INFO 25203 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 20:15:22.522  INFO 25203 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 20:15:22.526  INFO 25203 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-06-08 20:15:22.578  INFO 25203 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 20:15:22.715  INFO 25203 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 20:15:22.722 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:22.742 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:22.756 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:22.777 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:22.779 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:22.781 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:22.799 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:15:22.799 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 20:15:22.800 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 20:15:22.801 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 20:15:22.804 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-06-08 20:15:22.809 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : <==      Total: 5
+2020-06-08 20:15:22.809 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:15:22.809 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:15:22.810 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:15:22.814 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:15:22.815 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:15:22.816 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:15:22.816 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:15:22.817 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:15:22.817 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:15:22.818 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:15:22.818 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:15:22.818 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:15:22.818 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:15:22.819 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:15:22.820 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:15:23.225 DEBUG 25203 --- [http-nio-8887-exec-2] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:23.226 DEBUG 25203 --- [http-nio-8887-exec-2] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:23.227 DEBUG 25203 --- [http-nio-8887-exec-2] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:23.230 DEBUG 25203 --- [http-nio-8887-exec-2] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:23.230 DEBUG 25203 --- [http-nio-8887-exec-3] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:23.230 DEBUG 25203 --- [http-nio-8887-exec-4] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:23.230 DEBUG 25203 --- [http-nio-8887-exec-5] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:23.231 DEBUG 25203 --- [http-nio-8887-exec-2] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:23.231 DEBUG 25203 --- [http-nio-8887-exec-6] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:23.231 DEBUG 25203 --- [http-nio-8887-exec-3] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:23.231 DEBUG 25203 --- [http-nio-8887-exec-4] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:23.231 DEBUG 25203 --- [http-nio-8887-exec-5] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:23.232 DEBUG 25203 --- [http-nio-8887-exec-6] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:23.232 DEBUG 25203 --- [http-nio-8887-exec-2] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:23.232 DEBUG 25203 --- [http-nio-8887-exec-3] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:23.232 DEBUG 25203 --- [http-nio-8887-exec-5] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:23.233 DEBUG 25203 --- [http-nio-8887-exec-4] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:23.234 DEBUG 25203 --- [http-nio-8887-exec-6] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:23.235 DEBUG 25203 --- [http-nio-8887-exec-3] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:23.235 DEBUG 25203 --- [http-nio-8887-exec-5] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:23.235 DEBUG 25203 --- [http-nio-8887-exec-4] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:23.236 DEBUG 25203 --- [http-nio-8887-exec-3] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:23.236 DEBUG 25203 --- [http-nio-8887-exec-5] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:23.236 DEBUG 25203 --- [http-nio-8887-exec-6] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:23.236 DEBUG 25203 --- [http-nio-8887-exec-4] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:23.237 DEBUG 25203 --- [http-nio-8887-exec-6] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:23.239 DEBUG 25203 --- [http-nio-8887-exec-4] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:23.239 DEBUG 25203 --- [http-nio-8887-exec-3] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:23.239 DEBUG 25203 --- [http-nio-8887-exec-5] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:23.239 DEBUG 25203 --- [http-nio-8887-exec-6] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:23.388 DEBUG 25203 --- [http-nio-8887-exec-7] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:23.389 DEBUG 25203 --- [http-nio-8887-exec-7] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:23.389 DEBUG 25203 --- [http-nio-8887-exec-7] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:23.390 DEBUG 25203 --- [http-nio-8887-exec-7] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:23.390 DEBUG 25203 --- [http-nio-8887-exec-7] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:23.391 DEBUG 25203 --- [http-nio-8887-exec-7] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:32.554 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:32.554 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:32.555 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:32.556 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:32.556 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:32.556 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:32.558 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.Q.selectByPrimaryKey             : ==>  Preparing: select ID, TITLE, DESCRIPTION, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION where ID = ? 
+2020-06-08 20:15:32.559 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.Q.selectByPrimaryKey             : ==> Parameters: 25(Long)
+2020-06-08 20:15:32.559 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.Q.selectByPrimaryKey             : <==      Total: 1
+2020-06-08 20:15:32.560 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:15:32.560 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:15:32.560 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:15:32.564 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.QuestionExtMapper.selectRelated  : ==>  Preparing: select * from QUESTION where id != ? and tag regexp ? 
+2020-06-08 20:15:32.565 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.QuestionExtMapper.selectRelated  : ==> Parameters: 25(Long), java|spring(String)
+2020-06-08 20:15:32.569 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.QuestionExtMapper.selectRelated  : <==      Total: 10
+2020-06-08 20:15:32.580 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.CommentMapper.selectByExample    : ==>  Preparing: select ID, PARENT_ID, TYPE, COMMENTATOR, GMT_CREATE, GMT_MODIFIED, LIKE_COUNT, CONTENT, COMMENT_COUNT from COMMENT WHERE ( PARENT_ID = ? and TYPE = ? ) order by gmt_create desc 
+2020-06-08 20:15:32.581 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.CommentMapper.selectByExample    : ==> Parameters: 25(Long), 1(Integer)
+2020-06-08 20:15:32.582 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.m.CommentMapper.selectByExample    : <==      Total: 0
+2020-06-08 20:15:32.582 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.mapper.QuestionExtMapper.incView   : ==>  Preparing: update QUESTION set VIEW_COUNT = VIEW_COUNT + ? where id=? 
+2020-06-08 20:15:32.584 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.mapper.QuestionExtMapper.incView   : ==> Parameters: 1(Integer), 25(Long)
+2020-06-08 20:15:32.591 DEBUG 25203 --- [http-nio-8887-exec-8] c.w.c.mapper.QuestionExtMapper.incView   : <==    Updates: 1
+2020-06-08 20:15:32.645 DEBUG 25203 --- [http-nio-8887-exec-10] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:32.645 DEBUG 25203 --- [http-nio-8887-exec-9] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:32.645 DEBUG 25203 --- [http-nio-8887-exec-3] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:32.645 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:32.645 DEBUG 25203 --- [http-nio-8887-exec-2] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:32.645 DEBUG 25203 --- [http-nio-8887-exec-9] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:32.645 DEBUG 25203 --- [http-nio-8887-exec-3] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:32.645 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:32.645 DEBUG 25203 --- [http-nio-8887-exec-2] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:32.645 DEBUG 25203 --- [http-nio-8887-exec-10] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:32.646 DEBUG 25203 --- [http-nio-8887-exec-3] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:32.646 DEBUG 25203 --- [http-nio-8887-exec-5] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:15:32.647 DEBUG 25203 --- [http-nio-8887-exec-5] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:15:32.648 DEBUG 25203 --- [http-nio-8887-exec-3] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:32.648 DEBUG 25203 --- [http-nio-8887-exec-10] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:32.648 DEBUG 25203 --- [http-nio-8887-exec-5] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:32.648 DEBUG 25203 --- [http-nio-8887-exec-2] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:32.648 DEBUG 25203 --- [http-nio-8887-exec-9] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:32.648 DEBUG 25203 --- [http-nio-8887-exec-3] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:32.648 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:15:32.648 DEBUG 25203 --- [http-nio-8887-exec-3] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:32.649 DEBUG 25203 --- [http-nio-8887-exec-9] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:32.649 DEBUG 25203 --- [http-nio-8887-exec-5] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:32.649 DEBUG 25203 --- [http-nio-8887-exec-10] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:32.649 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:32.649 DEBUG 25203 --- [http-nio-8887-exec-2] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:15:32.650 DEBUG 25203 --- [http-nio-8887-exec-10] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:32.650 DEBUG 25203 --- [http-nio-8887-exec-9] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:32.650 DEBUG 25203 --- [http-nio-8887-exec-10] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:32.650 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:32.650 DEBUG 25203 --- [http-nio-8887-exec-5] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:32.650 DEBUG 25203 --- [http-nio-8887-exec-1] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:32.650 DEBUG 25203 --- [http-nio-8887-exec-2] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:15:32.650 DEBUG 25203 --- [http-nio-8887-exec-5] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:32.651 DEBUG 25203 --- [http-nio-8887-exec-9] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:32.650 DEBUG 25203 --- [http-nio-8887-exec-2] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:15:43.300  INFO 25203 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:15:43.301  INFO 25203 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 20:15:43.303  INFO 25203 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 20:20:18.027  INFO 25234 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication on wangyimingdeMacBook-Pro.local with PID 25234 (/Users/wym/IdeaProjects/community/target/classes started by wym in /Users/wym/IdeaProjects/community)
+2020-06-08 20:20:18.030  INFO 25234 --- [main] com.wym.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-06-08 20:20:18.937  INFO 25234 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-06-08 20:20:18.945  INFO 25234 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 20:20:18.945  INFO 25234 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 20:20:19.002  INFO 25234 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 20:20:19.002  INFO 25234 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 930 ms
+2020-06-08 20:20:19.461  INFO 25234 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:20:19.511  INFO 25234 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 20:20:19.664  INFO 25234 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-06-08 20:20:19.673  INFO 25234 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 1.975 seconds (JVM running for 2.614)
+2020-06-08 20:20:41.283  INFO 25234 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:23:17.983  INFO 25250 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication on wangyimingdeMacBook-Pro.local with PID 25250 (/Users/wym/IdeaProjects/community/target/classes started by wym in /Users/wym/IdeaProjects/community)
+2020-06-08 20:23:17.985  INFO 25250 --- [main] com.wym.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-06-08 20:23:18.848  INFO 25250 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-06-08 20:23:18.855  INFO 25250 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 20:23:18.856  INFO 25250 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 20:23:18.908  INFO 25250 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 20:23:18.909  INFO 25250 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 886 ms
+2020-06-08 20:23:19.354  INFO 25250 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:23:19.403  INFO 25250 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 20:23:19.555  INFO 25250 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-06-08 20:23:19.565  INFO 25250 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 1.884 seconds (JVM running for 2.495)
+2020-06-08 20:24:41.303  INFO 25250 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:37:52.372  INFO 25317 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication on wangyimingdeMacBook-Pro.local with PID 25317 (/Users/wym/IdeaProjects/community/target/classes started by wym in /Users/wym/IdeaProjects/community)
+2020-06-08 20:37:52.375  INFO 25317 --- [main] com.wym.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-06-08 20:37:53.327  INFO 25317 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-06-08 20:37:53.335  INFO 25317 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 20:37:53.335  INFO 25317 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 20:37:53.403  INFO 25317 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 20:37:53.404  INFO 25317 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 989 ms
+2020-06-08 20:37:53.899  INFO 25317 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:37:53.953  INFO 25317 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 20:37:54.146  INFO 25317 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-06-08 20:37:54.156  INFO 25317 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 2.116 seconds (JVM running for 2.869)
+2020-06-08 20:38:02.828  INFO 25317 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 20:38:02.829  INFO 25317 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 20:38:02.834  INFO 25317 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-08 20:38:02.887  INFO 25317 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 20:38:03.019  INFO 25317 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 20:38:03.027 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:38:03.048 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:38:03.065 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:38:03.090 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:38:03.091 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:38:03.093 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:38:03.110 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:38:03.110 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 20:38:03.111 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 20:38:03.112 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 20:38:03.113 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-06-08 20:38:03.116 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : <==      Total: 5
+2020-06-08 20:38:03.117 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:03.117 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:03.118 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:03.121 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:03.122 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:03.122 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:03.123 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:03.123 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:03.123 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:03.123 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:03.124 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:03.125 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:03.125 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:03.125 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:03.125 DEBUG 25317 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:07.938 DEBUG 25317 --- [http-nio-8887-exec-2] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-08 20:38:07.938 DEBUG 25317 --- [http-nio-8887-exec-2] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 013987ba-4b13-4ddf-8203-3a98abc55b9c(String)
+2020-06-08 20:38:07.939 DEBUG 25317 --- [http-nio-8887-exec-2] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-08 20:38:07.941 DEBUG 25317 --- [http-nio-8887-exec-2] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-08 20:38:07.941 DEBUG 25317 --- [http-nio-8887-exec-2] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-08 20:38:07.942 DEBUG 25317 --- [http-nio-8887-exec-2] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-08 20:38:07.952 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:38:07.952 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 20:38:07.952 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 20:38:07.953 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 20:38:07.953 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-06-08 20:38:07.954 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.Q.selectBySearch                 : <==      Total: 5
+2020-06-08 20:38:07.954 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:07.955 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:07.955 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:07.956 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:07.956 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:07.956 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:07.957 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:07.957 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:07.959 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:07.959 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:07.960 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:07.960 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:07.960 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:07.960 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:07.961 DEBUG 25317 --- [http-nio-8887-exec-3] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:29.126 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.m.Q.selectByPrimaryKey             : ==>  Preparing: select ID, TITLE, DESCRIPTION, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION where ID = ? 
+2020-06-08 20:38:29.127 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.m.Q.selectByPrimaryKey             : ==> Parameters: 26(Long)
+2020-06-08 20:38:29.127 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.m.Q.selectByPrimaryKey             : <==      Total: 1
+2020-06-08 20:38:29.128 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:29.128 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:29.129 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:29.131 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.m.QuestionExtMapper.selectRelated  : ==>  Preparing: select * from QUESTION where id != ? and tag regexp ? 
+2020-06-08 20:38:29.133 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.m.QuestionExtMapper.selectRelated  : ==> Parameters: 26(Long), java|linux(String)
+2020-06-08 20:38:29.136 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.m.QuestionExtMapper.selectRelated  : <==      Total: 9
+2020-06-08 20:38:29.147 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.m.CommentMapper.selectByExample    : ==>  Preparing: select ID, PARENT_ID, TYPE, COMMENTATOR, GMT_CREATE, GMT_MODIFIED, LIKE_COUNT, CONTENT, COMMENT_COUNT from COMMENT WHERE ( PARENT_ID = ? and TYPE = ? ) order by gmt_create desc 
+2020-06-08 20:38:29.148 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.m.CommentMapper.selectByExample    : ==> Parameters: 26(Long), 1(Integer)
+2020-06-08 20:38:29.149 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.m.CommentMapper.selectByExample    : <==      Total: 0
+2020-06-08 20:38:29.150 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.mapper.QuestionExtMapper.incView   : ==>  Preparing: update QUESTION set VIEW_COUNT = VIEW_COUNT + ? where id=? 
+2020-06-08 20:38:29.151 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.mapper.QuestionExtMapper.incView   : ==> Parameters: 1(Integer), 26(Long)
+2020-06-08 20:38:29.154 DEBUG 25317 --- [http-nio-8887-exec-6] c.w.c.mapper.QuestionExtMapper.incView   : <==    Updates: 1
+2020-06-08 20:38:51.796 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:38:51.796 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 20:38:51.796 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 20:38:51.797 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 20:38:51.797 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-06-08 20:38:51.798 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.Q.selectBySearch                 : <==      Total: 5
+2020-06-08 20:38:51.798 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:51.799 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:51.799 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:51.800 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:51.800 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:51.800 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:51.800 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:51.801 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:51.802 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:51.802 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:51.802 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:51.803 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:38:51.803 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:38:51.803 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:38:51.803 DEBUG 25317 --- [http-nio-8887-exec-8] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:39:09.994  INFO 25317 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:39:09.995  INFO 25317 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 20:39:09.998  INFO 25317 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 20:39:37.889  INFO 25338 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication on wangyimingdeMacBook-Pro.local with PID 25338 (/Users/wym/IdeaProjects/community/target/classes started by wym in /Users/wym/IdeaProjects/community)
+2020-06-08 20:39:37.891  INFO 25338 --- [main] com.wym.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-06-08 20:39:38.789  INFO 25338 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-06-08 20:39:38.797  INFO 25338 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 20:39:38.797  INFO 25338 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 20:39:38.862  INFO 25338 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 20:39:38.862  INFO 25338 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 935 ms
+2020-06-08 20:39:39.324  INFO 25338 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:39:39.381  INFO 25338 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 20:39:39.559  INFO 25338 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-06-08 20:39:39.569  INFO 25338 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 1.979 seconds (JVM running for 2.447)
+2020-06-08 20:39:44.621  INFO 25338 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 20:39:44.622  INFO 25338 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 20:39:44.626  INFO 25338 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-06-08 20:39:44.674  INFO 25338 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 20:39:44.776  INFO 25338 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 20:39:44.783 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:39:44.798 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 20:39:44.812 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 20:39:44.817 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 20:39:44.820 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-06-08 20:39:44.827 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : <==      Total: 5
+2020-06-08 20:39:44.828 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:39:44.830 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:39:44.832 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:39:44.837 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:39:44.837 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:39:44.838 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:39:44.839 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:39:44.839 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:39:44.839 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:39:44.839 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:39:44.840 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:39:44.841 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:39:44.841 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:39:44.841 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:39:44.842 DEBUG 25338 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:43:05.301  INFO 25338 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:43:05.303  INFO 25338 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 20:43:05.305  INFO 25338 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 20:44:53.731  INFO 25364 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication on wangyimingdeMacBook-Pro.local with PID 25364 (/Users/wym/IdeaProjects/community/target/classes started by wym in /Users/wym/IdeaProjects/community)
+2020-06-08 20:44:53.733  INFO 25364 --- [main] com.wym.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-06-08 20:44:54.679  INFO 25364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-06-08 20:44:54.686  INFO 25364 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 20:44:54.687  INFO 25364 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 20:44:54.743  INFO 25364 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 20:44:54.743  INFO 25364 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 968 ms
+2020-06-08 20:44:55.254  INFO 25364 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:44:55.304  INFO 25364 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 20:44:55.467  INFO 25364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-06-08 20:44:55.477  INFO 25364 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 2.113 seconds (JVM running for 2.74)
+2020-06-08 20:45:01.621  INFO 25364 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 20:45:01.621  INFO 25364 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 20:45:01.625  INFO 25364 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-06-08 20:45:01.674  INFO 25364 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 20:45:01.774  INFO 25364 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 20:45:01.781 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:45:01.795 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 20:45:01.808 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 20:45:01.813 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 20:45:01.816 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-06-08 20:45:01.821 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.Q.selectBySearch                 : <==      Total: 5
+2020-06-08 20:45:01.822 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:45:01.823 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:45:01.824 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:45:01.829 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:45:01.829 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:45:01.830 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:45:01.830 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:45:01.830 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:45:01.831 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:45:01.831 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:45:01.831 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:45:01.832 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:45:01.833 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-08 20:45:01.833 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-08 20:45:01.833 DEBUG 25364 --- [http-nio-8887-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-08 20:45:35.581  INFO 25364 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:45:35.583  INFO 25364 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 20:45:35.585  INFO 25364 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
