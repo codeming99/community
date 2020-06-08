@@ -71,6 +71,7 @@
 2020-06-08 17:22:15.800  INFO 24594 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-08 17:22:15.801  INFO 24594 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-08 17:22:15.804  INFO 24594 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+<<<<<<< Updated upstream
 2020-06-08 20:15:11.674  INFO 25203 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication on wangyimingdeMacBook-Pro.local with PID 25203 (/Users/wym/IdeaProjects/community/target/classes started by wym in /Users/wym/IdeaProjects/community)
 2020-06-08 20:15:11.677  INFO 25203 --- [main] com.wym.community.CommunityApplication   : No active profile set, falling back to default profiles: default
 2020-06-08 20:15:12.633  INFO 25203 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
@@ -597,3 +598,202 @@
 2020-06-08 21:49:29.553  INFO 25894 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-08 21:49:29.553  INFO 25894 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-08 21:49:29.556  INFO 25894 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+=======
+2020-06-08 20:00:44.725  INFO 49842 --- [main] c.w.community.CommunityApplicationTests  : Starting CommunityApplicationTests on 10-9-58-53 with PID 49842 (started by root in /root/App/community)
+2020-06-08 20:00:44.726  INFO 49842 --- [main] c.w.community.CommunityApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-08 20:00:48.013  WARN 49842 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-06-08 20:00:48.205  INFO 49842 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:00:48.384  INFO 49842 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 20:00:48.909  INFO 49842 --- [main] c.w.community.CommunityApplicationTests  : Started CommunityApplicationTests in 4.564 seconds (JVM running for 5.797)
+2020-06-08 20:00:49.336  INFO 49842 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:07:25.545  INFO 50023 --- [main] c.w.community.CommunityApplicationTests  : Starting CommunityApplicationTests on 10-9-58-53 with PID 50023 (started by root in /root/App/community)
+2020-06-08 20:07:25.547  INFO 50023 --- [main] c.w.community.CommunityApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-08 20:07:28.756  WARN 50023 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-06-08 20:07:28.941  INFO 50023 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:07:29.105  INFO 50023 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 20:07:29.635  INFO 50023 --- [main] c.w.community.CommunityApplicationTests  : Started CommunityApplicationTests in 4.459 seconds (JVM running for 5.721)
+2020-06-08 20:07:30.058  INFO 50023 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:09:42.688  INFO 50063 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication v0.0.1-SNAPSHOT on 10-9-58-53 with PID 50063 (/root/App/community/target/community-0.0.1-SNAPSHOT.jar started by root in /root/App/community)
+2020-06-08 20:09:42.690  INFO 50063 --- [main] com.wym.community.CommunityApplication   : The following profiles are active: production
+2020-06-08 20:09:45.341  INFO 50063 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-06-08 20:09:45.364  INFO 50063 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 20:09:45.364  INFO 50063 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 20:09:45.501  INFO 50063 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 20:09:45.501  INFO 50063 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2702 ms
+2020-06-08 20:09:45.836  WARN 50063 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-06-08 20:09:47.169  INFO 50063 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:09:47.322  INFO 50063 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 20:09:47.745  INFO 50063 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-06-08 20:09:47.762  INFO 50063 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 5.926 seconds (JVM running for 6.746)
+2020-06-08 20:11:01.694  INFO 50063 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 20:11:01.695  INFO 50063 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 20:11:01.714  INFO 50063 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2020-06-08 20:11:01.837  INFO 50063 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 20:11:02.197  INFO 50063 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 20:11:02.207 DEBUG 50063 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:11:09.053 DEBUG 50063 --- [http-nio-80-exec-7] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:13:02.327 DEBUG 50063 --- [http-nio-80-exec-6] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:16:21.624 DEBUG 50063 --- [http-nio-80-exec-2] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:16:36.185 DEBUG 50063 --- [http-nio-80-exec-10] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:16:54.464 DEBUG 50063 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:17:01.528 DEBUG 50063 --- [http-nio-80-exec-7] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:17:19.526 DEBUG 50063 --- [http-nio-80-exec-3] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:21:35.794 DEBUG 50063 --- [http-nio-80-exec-4] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:21:43.011 DEBUG 50063 --- [http-nio-80-exec-6] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:22:25.420 DEBUG 50063 --- [http-nio-80-exec-4] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:22:27.223 DEBUG 50063 --- [http-nio-80-exec-2] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:23:35.857 DEBUG 50063 --- [http-nio-80-exec-9] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:27:50.987 DEBUG 50063 --- [http-nio-80-exec-6] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:30:17.595 DEBUG 50063 --- [http-nio-80-exec-7] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:30:20.380 DEBUG 50063 --- [http-nio-80-exec-8] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:30:26.821 DEBUG 50063 --- [http-nio-80-exec-4] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:39:52.087 DEBUG 50063 --- [http-nio-80-exec-9] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-06-08 20:40:01.875 DEBUG 50063 --- [http-nio-80-exec-10] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:41:41.872  INFO 50063 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:41:41.873  INFO 50063 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 20:41:41.890  INFO 50063 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 20:49:54.876  INFO 50397 --- [main] c.w.community.CommunityApplicationTests  : Starting CommunityApplicationTests on 10-9-58-53 with PID 50397 (started by root in /root/App/community)
+2020-06-08 20:49:54.878  INFO 50397 --- [main] c.w.community.CommunityApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-08 20:49:58.198  WARN 50397 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-06-08 20:49:58.418  INFO 50397 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:49:58.588  INFO 50397 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 20:49:59.122  INFO 50397 --- [main] c.w.community.CommunityApplicationTests  : Started CommunityApplicationTests in 4.63 seconds (JVM running for 5.978)
+2020-06-08 20:49:59.539  INFO 50397 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:53:21.723  INFO 50454 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication v0.0.1-SNAPSHOT on 10-9-58-53 with PID 50454 (/root/App/community/target/community-0.0.1-SNAPSHOT.jar started by root in /root/App/community)
+2020-06-08 20:53:21.725  INFO 50454 --- [main] com.wym.community.CommunityApplication   : The following profiles are active: production
+2020-06-08 20:53:24.210  INFO 50454 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-06-08 20:53:24.234  INFO 50454 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 20:53:24.234  INFO 50454 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 20:53:24.369  INFO 50454 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 20:53:24.369  INFO 50454 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2539 ms
+2020-06-08 20:53:24.678  WARN 50454 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-06-08 20:53:26.037  INFO 50454 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:53:26.189  INFO 50454 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 20:53:26.655  INFO 50454 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-06-08 20:53:26.693  INFO 50454 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 5.789 seconds (JVM running for 6.637)
+2020-06-08 20:53:53.237  INFO 50454 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 20:53:53.237  INFO 50454 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 20:53:53.243  INFO 50454 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-08 20:53:53.399  INFO 50454 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 20:53:53.771  INFO 50454 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 20:53:53.778 DEBUG 50454 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 20:54:47.229  INFO 50454 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 20:54:47.230  INFO 50454 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 20:54:47.237  INFO 50454 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 21:27:49.445  INFO 51117 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication v0.0.1-SNAPSHOT on 10-9-58-53 with PID 51117 (/root/App/community/target/community-0.0.1-SNAPSHOT.jar started by root in /root/App/community)
+2020-06-08 21:27:49.451  INFO 51117 --- [main] com.wym.community.CommunityApplication   : The following profiles are active: production
+2020-06-08 21:27:52.085  INFO 51117 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-06-08 21:27:52.111  INFO 51117 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 21:27:52.111  INFO 51117 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 21:27:52.256  INFO 51117 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 21:27:52.257  INFO 51117 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2705 ms
+2020-06-08 21:27:52.607  WARN 51117 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-06-08 21:27:54.081  INFO 51117 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 21:27:54.257  INFO 51117 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 21:27:54.752  INFO 51117 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-06-08 21:27:54.772  INFO 51117 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 6.108 seconds (JVM running for 6.951)
+2020-06-08 21:28:00.855  INFO 51117 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 21:28:00.856  INFO 51117 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 21:28:00.884  INFO 51117 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2020-06-08 21:28:01.037  INFO 51117 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 21:28:01.422  INFO 51117 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 21:28:01.429 DEBUG 51117 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 21:28:01.472 DEBUG 51117 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 21:28:01.498 DEBUG 51117 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 21:28:01.517 DEBUG 51117 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 21:28:01.519 DEBUG 51117 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-06-08 21:28:01.520 DEBUG 51117 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-06-08 21:28:21.608 DEBUG 51117 --- [http-nio-80-exec-10] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 21:28:21.608 DEBUG 51117 --- [http-nio-80-exec-10] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 21:28:21.613 DEBUG 51117 --- [http-nio-80-exec-10] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 21:28:21.613 DEBUG 51117 --- [http-nio-80-exec-10] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 21:28:21.614 DEBUG 51117 --- [http-nio-80-exec-10] c.w.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-06-08 21:28:21.614 DEBUG 51117 --- [http-nio-80-exec-10] c.w.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-06-08 21:28:48.759  INFO 51117 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 21:28:48.759  INFO 51117 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 21:28:48.785  INFO 51117 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 21:32:21.531  INFO 51272 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication v0.0.1-SNAPSHOT on 10-9-58-53 with PID 51272 (/root/App/community/target/community-0.0.1-SNAPSHOT.jar started by root in /root/App/community)
+2020-06-08 21:32:21.534  INFO 51272 --- [main] com.wym.community.CommunityApplication   : The following profiles are active: production
+2020-06-08 21:32:24.252  INFO 51272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-06-08 21:32:24.275  INFO 51272 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 21:32:24.276  INFO 51272 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 21:32:24.410  INFO 51272 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 21:32:24.411  INFO 51272 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2740 ms
+2020-06-08 21:32:24.722  WARN 51272 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-06-08 21:32:26.042  INFO 51272 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 21:32:26.199  INFO 51272 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 21:32:26.682  INFO 51272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-06-08 21:32:26.709  INFO 51272 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 6.044 seconds (JVM running for 6.869)
+2020-06-08 21:32:36.302  INFO 51272 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 21:32:36.303  INFO 51272 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 21:32:36.321  INFO 51272 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-06-08 21:32:36.476  INFO 51272 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 21:32:36.742  INFO 51272 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 21:32:36.749 DEBUG 51272 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 21:32:36.782 DEBUG 51272 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 21:32:36.824 DEBUG 51272 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 21:32:36.850 DEBUG 51272 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 21:32:36.852 DEBUG 51272 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-06-08 21:32:36.853 DEBUG 51272 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-06-08 21:33:36.531 DEBUG 51272 --- [http-nio-80-exec-8] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 21:33:36.532 DEBUG 51272 --- [http-nio-80-exec-8] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 21:33:36.532 DEBUG 51272 --- [http-nio-80-exec-8] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 21:33:36.533 DEBUG 51272 --- [http-nio-80-exec-8] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 21:33:36.533 DEBUG 51272 --- [http-nio-80-exec-8] c.w.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-06-08 21:33:36.533 DEBUG 51272 --- [http-nio-80-exec-8] c.w.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-06-08 21:34:54.747  INFO 51272 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 21:34:54.748  INFO 51272 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 21:34:54.756  INFO 51272 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 21:41:05.115  INFO 51470 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication v0.0.1-SNAPSHOT on 10-9-58-53 with PID 51470 (/root/App/community/target/community-0.0.1-SNAPSHOT.jar started by root in /root/App/community)
+2020-06-08 21:41:05.120  INFO 51470 --- [main] com.wym.community.CommunityApplication   : The following profiles are active: production
+2020-06-08 21:41:07.782  INFO 51470 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-06-08 21:41:07.807  INFO 51470 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 21:41:07.807  INFO 51470 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 21:41:07.948  INFO 51470 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 21:41:07.948  INFO 51470 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2733 ms
+2020-06-08 21:41:08.272  WARN 51470 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-06-08 21:41:09.613  INFO 51470 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 21:41:09.763  INFO 51470 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 21:41:10.241  INFO 51470 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-06-08 21:41:10.259  INFO 51470 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 5.952 seconds (JVM running for 6.786)
+2020-06-08 21:41:25.702  INFO 51470 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 21:41:25.702  INFO 51470 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 21:41:25.721  INFO 51470 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2020-06-08 21:41:25.883  INFO 51470 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 21:41:26.265  INFO 51470 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 21:41:26.291 DEBUG 51470 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 21:41:26.327 DEBUG 51470 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 21:41:26.357 DEBUG 51470 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 21:41:26.376 DEBUG 51470 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 21:41:26.378 DEBUG 51470 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-06-08 21:41:26.379 DEBUG 51470 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-06-08 21:41:45.388  INFO 51470 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 21:41:45.388  INFO 51470 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 21:41:45.410  INFO 51470 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+>>>>>>> Stashed changes
+2020-06-08 21:56:32.816  INFO 51988 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication v0.0.1-SNAPSHOT on 10-9-58-53 with PID 51988 (/root/App/community/target/community-0.0.1-SNAPSHOT.jar started by root in /root/App/community)
+2020-06-08 21:56:32.818  INFO 51988 --- [main] com.wym.community.CommunityApplication   : The following profiles are active: production
+2020-06-08 21:56:35.369  INFO 51988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-06-08 21:56:35.398  INFO 51988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 21:56:35.398  INFO 51988 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 21:56:35.542  INFO 51988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 21:56:35.542  INFO 51988 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2629 ms
+2020-06-08 21:56:35.867  WARN 51988 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-06-08 21:56:37.232  INFO 51988 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 21:56:37.407  INFO 51988 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 21:56:37.888  INFO 51988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-06-08 21:56:37.918  INFO 51988 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 5.915 seconds (JVM running for 6.779)
+2020-06-08 21:56:57.098  INFO 51988 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 21:56:57.098  INFO 51988 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 21:56:57.116  INFO 51988 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-06-08 21:56:57.255  INFO 51988 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 21:56:57.585  INFO 51988 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 21:56:57.592 DEBUG 51988 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-08 21:56:57.649 DEBUG 51988 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-08 21:56:57.676 DEBUG 51988 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-08 21:56:57.696 DEBUG 51988 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-08 21:56:57.720 DEBUG 51988 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-06-08 21:56:57.721 DEBUG 51988 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-06-08 21:57:22.311  INFO 51988 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 21:57:22.312  INFO 51988 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 21:57:22.326  INFO 51988 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
