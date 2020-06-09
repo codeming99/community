@@ -3801,3 +3801,344 @@ java.lang.IllegalArgumentException: Cannot get list size of null
 =======
 >>>>>>> 641d1e35d48c7137b8d7d8510c5c706e8c907597
 >>>>>>> fff64d6b9278c922519245d8f1b7627802026e30
+2020-06-09 15:26:01.741  INFO 2186 --- [main] com.wym.community.CommunityApplication   : Starting CommunityApplication v0.0.1-SNAPSHOT on 10-9-58-53 with PID 2186 (/root/App/community/target/community-0.0.1-SNAPSHOT.jar started by root in /root/App/community)
+2020-06-09 15:26:01.743  INFO 2186 --- [main] com.wym.community.CommunityApplication   : The following profiles are active: production
+2020-06-09 15:26:04.372  INFO 2186 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-06-09 15:26:04.396  INFO 2186 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-09 15:26:04.397  INFO 2186 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-09 15:26:04.543  INFO 2186 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-09 15:26:04.543  INFO 2186 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2697 ms
+2020-06-09 15:26:04.889  WARN 2186 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-06-09 15:26:06.375  INFO 2186 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-09 15:26:06.538  INFO 2186 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-09 15:26:06.908  INFO 2186 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-06-09 15:26:06.935  INFO 2186 --- [main] com.wym.community.CommunityApplication   : Started CommunityApplication in 6.011 seconds (JVM running for 6.828)
+2020-06-09 15:26:13.164  INFO 2186 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-09 15:26:13.165  INFO 2186 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-09 15:26:13.188  INFO 2186 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2020-06-09 15:26:13.333  INFO 2186 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-09 15:26:13.737  INFO 2186 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-09 15:26:13.744 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:13.799 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687573220(Long), 1591687573220(Long)
+2020-06-09 15:26:13.841 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:13.849 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:13.849 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687573848(Long), 1591687573848(Long)
+2020-06-09 15:26:13.850 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:13.851 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:13.851 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687573850(Long), 1591687573850(Long)
+2020-06-09 15:26:13.851 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:13.868 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:13.869 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687573851(Long), 1591687573851(Long)
+2020-06-09 15:26:13.869 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:13.872 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:13.872 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:13.874 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:13.896 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:13.897 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:13.914 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:13.960 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-06-09 15:26:13.961 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-06-09 15:26:13.962 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-06-09 15:26:13.977 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-06-09 15:26:13.979 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-06-09 15:26:13.985 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.Q.selectBySearch                 : <==      Total: 3
+2020-06-09 15:26:13.985 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-09 15:26:13.986 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 3(Long)
+2020-06-09 15:26:13.987 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-09 15:26:13.990 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-09 15:26:13.990 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-06-09 15:26:13.990 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-09 15:26:13.991 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-06-09 15:26:13.991 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-06-09 15:26:13.991 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-06-09 15:26:15.019 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.021 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575007(Long), 1591687575007(Long)
+2020-06-09 15:26:15.022 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.023 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.023 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575022(Long), 1591687575022(Long)
+2020-06-09 15:26:15.023 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.024 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.024 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575024(Long), 1591687575024(Long)
+2020-06-09 15:26:15.025 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.026 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.026 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575025(Long), 1591687575025(Long)
+2020-06-09 15:26:15.026 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.027 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.027 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.028 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.030 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.030 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.030 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.033 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.033 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575007(Long), 1591687575007(Long)
+2020-06-09 15:26:15.033 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.034 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.034 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575033(Long), 1591687575033(Long)
+2020-06-09 15:26:15.035 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.035 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.036 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575035(Long), 1591687575035(Long)
+2020-06-09 15:26:15.036 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.037 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.038 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575036(Long), 1591687575036(Long)
+2020-06-09 15:26:15.038 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.038 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.039 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575013(Long), 1591687575013(Long)
+2020-06-09 15:26:15.039 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.040 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.040 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575039(Long), 1591687575039(Long)
+2020-06-09 15:26:15.041 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.041 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.042 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575041(Long), 1591687575041(Long)
+2020-06-09 15:26:15.042 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.043 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.043 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575042(Long), 1591687575042(Long)
+2020-06-09 15:26:15.043 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.043 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.044 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575012(Long), 1591687575012(Long)
+2020-06-09 15:26:15.044 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.045 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.045 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575044(Long), 1591687575044(Long)
+2020-06-09 15:26:15.045 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.046 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.046 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575045(Long), 1591687575045(Long)
+2020-06-09 15:26:15.047 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.048 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.048 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575047(Long), 1591687575047(Long)
+2020-06-09 15:26:15.048 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.048 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.049 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575011(Long), 1591687575011(Long)
+2020-06-09 15:26:15.049 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.050 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.050 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575049(Long), 1591687575049(Long)
+2020-06-09 15:26:15.050 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.051 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.051 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575050(Long), 1591687575050(Long)
+2020-06-09 15:26:15.052 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.052 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.053 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575052(Long), 1591687575052(Long)
+2020-06-09 15:26:15.053 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.053 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.054 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575010(Long), 1591687575010(Long)
+2020-06-09 15:26:15.054 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.055 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.055 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575054(Long), 1591687575054(Long)
+2020-06-09 15:26:15.055 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.056 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.056 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575055(Long), 1591687575055(Long)
+2020-06-09 15:26:15.056 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.057 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.057 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575056(Long), 1591687575056(Long)
+2020-06-09 15:26:15.057 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.059 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.060 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.060 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.060 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.061 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.061 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.062 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.062 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.082 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.083 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.084 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.084 DEBUG 2186 --- [http-nio-80-exec-6] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.086 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.086 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.087 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.087 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.088 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.088 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.089 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.090 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.090 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.090 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.091 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.091 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.091 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.098 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.098 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575097(Long), 1591687575097(Long)
+2020-06-09 15:26:15.098 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.099 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.099 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575098(Long), 1591687575098(Long)
+2020-06-09 15:26:15.099 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.100 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.100 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575099(Long), 1591687575099(Long)
+2020-06-09 15:26:15.101 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.101 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.101 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.102 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.102 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.114 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.119 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.120 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575114(Long), 1591687575114(Long)
+2020-06-09 15:26:15.120 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.120 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.121 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.121 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.133 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.133 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.134 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.161 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.161 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575160(Long), 1591687575160(Long)
+2020-06-09 15:26:15.162 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.163 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.163 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575162(Long), 1591687575162(Long)
+2020-06-09 15:26:15.163 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.164 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.164 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575163(Long), 1591687575163(Long)
+2020-06-09 15:26:15.164 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.165 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.165 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575164(Long), 1591687575164(Long)
+2020-06-09 15:26:15.165 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.166 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.166 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.166 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.167 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.167 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.167 DEBUG 2186 --- [http-nio-80-exec-9] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.178 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.178 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575177(Long), 1591687575177(Long)
+2020-06-09 15:26:15.178 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.179 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.179 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575178(Long), 1591687575178(Long)
+2020-06-09 15:26:15.179 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.180 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.180 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575179(Long), 1591687575179(Long)
+2020-06-09 15:26:15.180 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.181 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.181 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575180(Long), 1591687575180(Long)
+2020-06-09 15:26:15.181 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.182 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.182 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.182 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.183 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.183 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.183 DEBUG 2186 --- [http-nio-80-exec-10] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.185 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.186 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575185(Long), 1591687575185(Long)
+2020-06-09 15:26:15.186 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.186 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.187 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575186(Long), 1591687575186(Long)
+2020-06-09 15:26:15.187 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.187 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.188 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575187(Long), 1591687575187(Long)
+2020-06-09 15:26:15.188 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.188 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.188 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575188(Long), 1591687575188(Long)
+2020-06-09 15:26:15.189 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.189 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.189 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.189 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.190 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.190 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.190 DEBUG 2186 --- [http-nio-80-exec-1] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.193 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.193 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575192(Long), 1591687575192(Long)
+2020-06-09 15:26:15.193 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.194 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.194 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575193(Long), 1591687575193(Long)
+2020-06-09 15:26:15.194 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.195 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.195 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575194(Long), 1591687575194(Long)
+2020-06-09 15:26:15.195 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.196 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.196 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575195(Long), 1591687575195(Long)
+2020-06-09 15:26:15.196 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.197 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.197 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.197 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.198 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.198 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.198 DEBUG 2186 --- [http-nio-80-exec-2] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.221 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.222 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575221(Long), 1591687575221(Long)
+2020-06-09 15:26:15.222 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.223 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.223 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575222(Long), 1591687575222(Long)
+2020-06-09 15:26:15.223 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.224 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.224 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575223(Long), 1591687575223(Long)
+2020-06-09 15:26:15.224 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.225 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.225 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575224(Long), 1591687575224(Long)
+2020-06-09 15:26:15.225 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.226 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.226 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.227 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.228 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.228 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.228 DEBUG 2186 --- [http-nio-80-exec-5] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.231 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.231 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575230(Long), 1591687575230(Long)
+2020-06-09 15:26:15.231 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.232 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.232 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575231(Long), 1591687575231(Long)
+2020-06-09 15:26:15.232 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.233 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.233 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575232(Long), 1591687575232(Long)
+2020-06-09 15:26:15.233 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.234 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.234 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575233(Long), 1591687575233(Long)
+2020-06-09 15:26:15.234 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.234 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.234 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.235 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.235 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.236 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.236 DEBUG 2186 --- [http-nio-80-exec-7] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.320 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.321 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575320(Long), 1591687575320(Long)
+2020-06-09 15:26:15.321 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.322 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.322 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575321(Long), 1591687575321(Long)
+2020-06-09 15:26:15.322 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.323 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.323 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575322(Long), 1591687575322(Long)
+2020-06-09 15:26:15.323 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.324 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.324 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575323(Long), 1591687575323(Long)
+2020-06-09 15:26:15.324 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.324 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.325 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.325 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.325 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.325 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.326 DEBUG 2186 --- [http-nio-80-exec-4] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.363 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.363 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575362(Long), 1591687575362(Long)
+2020-06-09 15:26:15.364 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.364 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.365 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575364(Long), 1591687575364(Long)
+2020-06-09 15:26:15.365 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.365 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.365 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575365(Long), 1591687575365(Long)
+2020-06-09 15:26:15.365 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.366 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.366 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575366(Long), 1591687575366(Long)
+2020-06-09 15:26:15.366 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.385 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.385 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.385 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.386 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.387 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.387 DEBUG 2186 --- [http-nio-80-exec-8] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:15.388 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.389 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), NAV(String), 1591687575388(Long), 1591687575388(Long)
+2020-06-09 15:26:15.389 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.389 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.389 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), SIDE(String), 1591687575389(Long), 1591687575389(Long)
+2020-06-09 15:26:15.390 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.390 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.390 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), FOOTER(String), 1591687575390(Long), 1591687575390(Long)
+2020-06-09 15:26:15.390 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.391 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==>  Preparing: select ID, TITLE, URL, IMAGE, GMT_START, GMT_END, GMT_CREATE, GMT_MODIFIED, STATUS, POS from AD WHERE ( STATUS = ? and POS = ? and GMT_START < ? and GMT_END > ? ) 
+2020-06-09 15:26:15.391 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : ==> Parameters: 1(Integer), HEADER(String), 1591687575390(Long), 1591687575390(Long)
+2020-06-09 15:26:15.391 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.AdMapper.selectByExample    : <==      Total: 0
+2020-06-09 15:26:15.392 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-06-09 15:26:15.392 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.UserMapper.selectByExample  : ==> Parameters: 53697933-3d74-406c-844a-93b50bc57c88(String)
+2020-06-09 15:26:15.392 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-06-09 15:26:15.392 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-06-09 15:26:15.392 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-06-09 15:26:15.392 DEBUG 2186 --- [http-nio-80-exec-3] c.w.c.m.N.countByExample                 : <==      Total: 1
+2020-06-09 15:26:30.070  INFO 2186 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-09 15:26:30.070  INFO 2186 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-09 15:26:30.083  INFO 2186 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
