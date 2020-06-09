@@ -3,6 +3,7 @@ package com.wym.community.service;
 import com.wym.community.dto.PaginationDTO;
 import com.wym.community.dto.QuestionDTO;
 import com.wym.community.dto.QuestionQueryDTO;
+import com.wym.community.enums.SortEnum;
 import com.wym.community.exception.CustomizeErrorCode;
 import com.wym.community.exception.CustomizeException;
 import com.wym.community.mapper.QuestionExtMapper;
@@ -34,11 +35,16 @@ public class QuestionService {
     @Autowired
     private QuestionExtMapper questionExtMapper;
 
-    public PaginationDTO list(String search,Integer page, Integer size) {
+    public PaginationDTO list(String search,String tag,String sort,Integer page, Integer size) {
 
         if(StringUtils.isNotBlank(search)){
             String[] tags = StringUtils.split(search," ");
-            search = Arrays.stream(tags).collect(Collectors.joining("|"));
+            search = Arrays
+                    .stream(tags)
+                    .filter(StringUtils::isNotBlank)
+                    .map(t -> t.replace("+","").replace("*","").replace("?",""))
+                    .filter(StringUtils::isNotBlank)
+                    .collect(Collectors.joining("|"));
         }
 
         PaginationDTO paginationDTO = new PaginationDTO();
@@ -47,7 +53,30 @@ public class QuestionService {
 
         QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
         questionQueryDTO.setSearch(search);
+
+        if(StringUtils.isNotBlank(tag)){
+            tag = tag.replace("+","").replace("*","").replace("?","");
+            questionQueryDTO.setTag(tag);
+        }
+
+        for(SortEnum sortEnum : SortEnum.values()){
+            if(sortEnum.name().toLowerCase().equals(sort)){
+                questionQueryDTO.setSort(sort);
+
+                if(sortEnum == SortEnum.HTO7){
+                    questionQueryDTO.setTime(System.currentTimeMillis() - 1000L * 60 * 60 * 24 * 7);
+                }
+
+                if(sortEnum == SortEnum.HOT30){
+                    questionQueryDTO.setTime(System.currentTimeMillis() - 1000L * 60 * 60 * 24 * 30);
+                }
+
+                break;
+            }
+        }
+
         Integer totalCount = questionExtMapper.countBySearch(questionQueryDTO);
+
         if (totalCount % size == 0){
             totalPage = totalCount / size;
         }else {
@@ -65,7 +94,7 @@ public class QuestionService {
         paginationDTO.setPagination(totalPage,page);
 
 
-        Integer offset = size * (page - 1);
+        Integer offset = page < 1 ? 0 : size * (page - 1);
         QuestionExample questionExample = new QuestionExample();
         questionExample.setOrderByClause("gmt_create desc");
         questionQueryDTO.setSize(size);
@@ -186,7 +215,12 @@ public class QuestionService {
             return new ArrayList<>();
         }
         String[] tags = StringUtils.split(queryDTO.getTag(),",");
-        String regexpTag = Arrays.stream(tags).collect(Collectors.joining("|"));
+        String regexpTag = Arrays
+                .stream(tags)
+                .filter(StringUtils::isNotBlank)
+                .map(t -> t.replace("+", "").replace("*", "").replace("?", ""))
+                .filter(StringUtils::isNotBlank)
+                .collect(Collectors.joining("|"));
         Question question = new Question();
         question.setId(queryDTO.getId());
         question.setTag(regexpTag);

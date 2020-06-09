@@ -29,7 +29,7 @@ public class CustomizeErrorController implements ErrorController {
         }
 
         if(status.is5xxServerError()){
-            model.addAttribute("message","服务器扛不住啦，过会再来!");
+            model.addAttribute("message","服务器冒烟了，过会再来!");
         }
 
         return new ModelAndView("error");
